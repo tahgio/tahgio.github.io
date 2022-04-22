@@ -1,0 +1,76 @@
+@import '../../variables';
+
+
+.info {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0; 
+
+  h1 {
+    font-family: 'Inconsolata', monospace;
+    font-weight: 800;
+    font-size: 38px;
+    color: $highlight;
+
+     &:hover {
+       animation: headShake 1s forwards;
+     }
+  }
+
+  .skill-ctner {
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  svg {
+    font-size: 90px;
+    fill: $primary-color;
+    color: $primary-color;
+  }
+
+  .edu-ctner {
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+}
+
+.lganime {
+  opacity: 0;
+  animation: bounceIn 1s 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+}
+
+.lganime-hover {
+
+  &:hover {
+    animation: headShake 1s forwards;
+    color: $stroke;
+    fill: $stroke;
+  }
+}
+
+@for $i from 1 through 30 {
+  .lganime._#{$i} {
+    animation-delay: #{$i / 10}s;
+  }
+}
+
+#chamaleon {
+  &:hover {
+    animation: fadeOut 2s forwards;
+  }
+}

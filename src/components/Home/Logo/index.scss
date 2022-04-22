@@ -1,0 +1,123 @@
+@import '../../../variables';
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1;
+  } 
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes tdash {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.logo-container {
+  z-index: 0;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: 15%;
+  bottom: 0;
+  left: auto;
+  margin:auto;
+
+  svg {
+    width: 820px;
+    height: auto;
+    position: absolute;
+    top: 2%;
+    right: auto;
+    bottom: 0;
+    left: -44.3%;
+    margin:auto;
+    //transform: rotateZ(30deg) !important;
+  }
+
+  .solid-logo {
+    width: 62%;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 8s;
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
+
+
+.svg-container {
+  fill: none;
+  stroke: $main;
+  stroke-width: 1pt;
+}
+
+.path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 5s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+.pathF {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 3s ease-in-out forwards;
+  animation-delay: 3s;
+}
+
+.pathS {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 4s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.fill {
+  stroke-width: 3;
+  animation-delay: 4s;
+}
+
+
+
+.t-container {
+  fill:none;
+  stroke: $highlight;
+  stroke-width:3.492;
+  stroke-miterlimit:10;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.st0 {
+  transform: translateX(3.5px);
+  animation: tdash 3s ease-in-out forwards;
+  animation-delay: 6.5s;
+}
+
+.st1 {
+  transform: translateX(-2.5px);
+  animation: tdash 3s ease-in-out forwards;
+  animation-delay: 6.5s;
+}
+
+.logot {
+  position: absolute;
+  top: 170px;
+  right: -70px;
+  bottom: auto;
+  left: 0;
+  margin: auto;
+}

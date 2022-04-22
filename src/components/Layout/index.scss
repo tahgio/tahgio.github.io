@@ -1,0 +1,246 @@
+@import '../../variables';
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.top-tags {
+  bottom: auto;
+  top: 35px;
+}
+
+.tags {
+  color: $primary-color;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 80px;
+  left: 120px;
+  font-size: 18px;
+  font-family: 'La Belle Aurore';
+}
+
+.bottom-tag-html {
+  margin-left: -20px;
+}
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  will-change: contents;
+  height: 90%;
+  min-height: 566px;
+  position: absolute;
+  opacity: 0;
+  top: 5%;
+  margin: 0 auto;
+  z-index: 1;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+}
+
+.about-page,
+.contact-page
+{
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35%;
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
+
+    h1 {
+      font-size: 53px;
+      font-family: 'Coolvetica';
+      color: $primary-color;
+      font-weight: 400;
+      margin-top: 0;
+      position: relative;
+      margin-bottom: 40px;
+      left: 10px;
+    }
+
+
+    p {
+      font-size: 13px;
+      color: $secondary-color;
+      font-family: 'Inconsolata', monospace;
+      font-weight: 500;
+      min-width: fit-content;
+      animation: pulse 1s;
+
+      &:nth-of-type(1) {
+        animation-delay: 1.1s;
+      }
+  
+      &:nth-of-type(2) {
+        animation-delay: 1.2s;
+      }
+  
+      &:nth-of-type(3) {
+        animation-delay: 1.3s;
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .logo-container,
+  .info
+  {
+    display: none;
+  }
+
+  .container {
+    left: 100px;
+    margin: 0;
+  }
+
+  .about-page,
+.contact-page
+{
+  .text-zone {
+    width: 60%;
+  }
+}
+}
+
+@media only screen and (max-width: 500px) {
+
+  .container {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+  }
+
+  .nav-bar {
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    top: 0;
+    min-height: 0;
+    display: flex;
+  
+    .logo {
+      position: absolute;
+      left: 5%;
+      top: 0;
+  
+      img {
+        width: 40px;
+        height: auto;
+  
+        &.sub-logo {
+          display: none;
+        }
+      }
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: space-around;
+      position: absolute;
+      height: 50%;
+      top: 15%;
+      left: 22%;
+      margin-top: 0;
+      width: 50%;
+  
+      a {
+        font-size: 18px;
+        color: $button-text;
+        display: block;
+        position: relative;
+        text-decoration: none;
+        color: $button-text;
+  
+        i {
+          transition: none;
+        }
+  
+        &:hover {
+          color: $button-text;
+  
+          svg {
+            opacity: 0;
+          }
+  
+          &:after {
+            opacity: 1;
+          }        
+        }
+  
+        &:after {
+          content: '';
+          font-size: 9px;
+          letter-spacing: 2px;
+          position: absolute;
+          bottom: 0;
+          display: block;
+          width: 100%;
+          text-align: center;
+          opacity: 0;
+          transition: all 0.3s ease-out;
+        }
+  
+        &:first-child {
+          &::after {
+            content: 'HOME';
+          }
+        }
+      }
+      a.about-link {
+        &:after {
+          content: 'ABOUT';
+        }
+      }
+  
+      a.contact-link {
+        &:after {
+          content: 'CONTACT';
+        }
+      }
+  
+      a.active {
+        svg {
+          color: $primary-color;
+        }
+      }
+    }
+    
+
+    ul {
+      position: absolute;
+      top: 30%; 
+      display: block;
+      list-style: none;      
+  
+      li {
+        display: flex;
+        float: right;
+        margin-right: 5%;
+
+        a {
+          padding: 2px 0;
+          display: inline;
+          font-size: 19px;
+  
+          &:hover svg {
+            color: $primary-color
+          }
+        }
+      }
+    }
+  
+  }
+}
