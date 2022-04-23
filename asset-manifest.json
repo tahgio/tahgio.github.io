@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.19716be8.css",
-    "main.js": "/static/js/main.3f2600c0.js",
+    "main.css": "/static/css/main.ebe612f0.css",
+    "main.js": "/static/js/main.428ff0cc.js",
     "static/media/Inconsolata.ttf": "/static/media/Inconsolata.d436e6cbc31e78bb4421.ttf",
     "static/media/logo-t.png": "/static/media/logo-t.3adf3d5e744dbf2ab7c0.png",
     "static/media/logo-t-nav.png": "/static/media/logo-t-nav.e3ed16a9b9710a8559c4.png",
@@ -9,11 +9,11 @@
     "static/media/helvetica-neu.ttf": "/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
     "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/index.html",
-    "main.19716be8.css.map": "/static/css/main.19716be8.css.map",
-    "main.3f2600c0.js.map": "/static/js/main.3f2600c0.js.map"
+    "main.ebe612f0.css.map": "/static/css/main.ebe612f0.css.map",
+    "main.428ff0cc.js.map": "/static/js/main.428ff0cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.19716be8.css",
-    "static/js/main.3f2600c0.js"
+    "static/css/main.ebe612f0.css",
+    "static/js/main.428ff0cc.js"
   ]
 }
