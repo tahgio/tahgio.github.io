@@ -83,7 +83,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
-    <Loader type='ball-spin-fade-loader' />
+    <Loader className='loader' type='ball-spin-fade-loader' />
     </>
   )
 }

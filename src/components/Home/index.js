@@ -49,7 +49,7 @@ setTimeout(() => {
       </div>
       <Logo />
     </div>
-    <Loader type='ball-spin-fade-loader' />
+    <Loader className='loader' type='ball-spin-fade-loader' />
     </>
   )
 }
